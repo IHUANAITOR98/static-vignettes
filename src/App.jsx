@@ -8,6 +8,7 @@ const App = () => {
     <div>
         <Routes>
         <Route path='/' element={<SurveyPage />} />
+        <Route path='/static-vignettes/' element={<SurveyPage />} />
       </Routes>
     </div>
   )
