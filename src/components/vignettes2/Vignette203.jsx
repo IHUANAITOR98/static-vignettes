@@ -1,19 +1,31 @@
-import { PieChart } from '@mui/x-charts/PieChart';
+import { BarChart } from '@mui/x-charts/BarChart';
 
 const Vignette13 = () => {
     return( 
         <div className="bg-yellow-300 w-screen p-12">
-            <p className='text-primary-content'>Suponga que se le presenta la oportunidad de emprender en un negocio propio que cuenta 
-                con estas caracteristicas: </p>
-            <ul className='list-disc list-inside text-black'>
-                <li>Por cada peso invertido recibes un peso de ganancia</li>
-                <li>Solo tienes un competidor a la redonda</li>
-                <li>El tiempo que debes invertir al día son 12 horas en total</li>
-            </ul>
+            <div className=" items-center justify-center bg-white rounded-box p-7">
+                <p className='text-primary-content'>
+                    Para esta ocasión calculas los siguientes indicadores que te ayudarán a tomar una decisión 
+                </p>
+                <ul className='list-disc list-inside text-black'>
+                    <li>Competencia: en el mapa de puestos observas que hay un puesto ocupado a la redonda</li>
+                    <li>Esfuerzo: calculas que esta vez tendras que dedicarle 12 horas diarias a actividades del puesto</li>
+                    <li>Ingresos: para esta ocasión calculas que del 100% de tus ingresos 25% serán gastos y 75% ganancias</li>
+                </ul>
+                <p className='text-primary-content'>
+                    Después de leer los indicadores, ¿decides poner el puesto, o no? 
+                </p>
+            </div>
             
+            <div className='h-16 w-screen'>
+                <p className="text-center font-bold text-black p-4">
+                    Pregunta 3
+                </p>
+            </div>
+
             <div className="flex flex-wrap items-center justify-center bg-white rounded-box p-7">
                 <div className='text-center flex-wrap w-3/4'>
-                    <p className='font-bold text-lg text-black'>Mapa de negocios a la redonda</p>
+                    <p className='font-bold text-lg text-black'>Mapa de puestos a la redonda</p>
                     <table className="table-fixed w-full">
                     <tbody>
                         <tr>
@@ -23,8 +35,8 @@ const Vignette13 = () => {
                             <td className=" border border-slate-900 text-white">
                                 2
                             </td>
-                            <td className=" border border-slate-900 text-white">
-                                3
+                            <td className=" border border-slate-900 bg-gray-500 text-black">
+                                Vacio
                             </td>
                             <td className=" border border-slate-900 text-white">
                                 4
@@ -51,14 +63,14 @@ const Vignette13 = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td className='border border-slate-900 bg-red-500 text-black'>
-                                Competencia
+                            <td className=" border border-slate-900 bg-gray-500 text-black">
+                                Vacio
                             </td>
-                            <td className='border border-slate-900 text-white'>
+                            <td className='border border-slate-900  text-white'>
                                 12
                             </td>
-                            <td className="border border-slate-900 bg-green-400 text-black">
-                                Su Negocio
+                            <td className="border border-slate-900  bg-green-400 text-black">
+                                Tu Puesto
                             </td>
                             <td className="border border-slate-900 text-white">
                                 14
@@ -91,8 +103,8 @@ const Vignette13 = () => {
                             <td className='border border-slate-900 text-white'>
                                 22
                             </td>
-                            <td className="border border-slate-900 text-white">
-                                23
+                            <td className=" border border-slate-900 bg-gray-500 text-black">
+                                Vacio
                             </td>
                             <td className="border border-slate-900 text-white">
                                 24
@@ -102,42 +114,28 @@ const Vignette13 = () => {
                             </td>
                         </tr>
                     </tbody>
-                </table>
+                    </table>
                 </div>
                 <div className='h-16 w-screen'></div>
                 <div className='w-1/2'>
                     <div className='text-center flex-wrap'>
                         <p className='font-bold text-lg text-black'>Destino del dinero ingresado</p>
-                        <PieChart series={[
-                    {
-                        data: [
-                            { id: 0, value: 33, label: 'Ganancias' },
-                            { id: 1, value: 66, label: 'Gastos' },
-                        ],
-                        cx: 100,
-                        cy: 100,
-                        },
-                    ]}
-                    width={200}
-                    height={200}
-                    />
+                        <BarChart
+                            xAxis={[{ data: ['Gastos', 'Ganancias'] }]}
+                            series={[{ data: [25,75] } ]}
+                            height={200}
+                        />
                     </div>
                 </div>
                 <div className='w-1/2'>
                     <div className='text-center'>
                         <p className='font-bold text-lg text-black'>Horas del día destinadas al negocio</p>
-                        <progress className="progress progress-success h-12 w-80" value={33} max={100}></progress>
-                        <p className='italic text-black'>8 horas || 16 horas</p>
+                        <progress className="progress progress-success h-12 w-80" value={50} max={100}></progress>
+                        <p className='italic text-black'>12 horas || 12 horas</p>
                     </div>
                 </div>
             </div>
             <div className='h-16 w-screen'></div>
-            <div className="flex flex-wrap items-center justify-center space-x-3 bg-white rounded-box p-7">
-                 <p className='font-bold text-black w-1/2'>¿Emprendería en este negocio?</p> 
-                 <p className='italic text-black'>No</p>
-                 <input type="checkbox" className="toggle checked:toggle-success checked:[--tglbg:green]" defaultChecked />
-                 <p className='italic text-black'>Si</p>
-            </div>
         </div>);
 };
 

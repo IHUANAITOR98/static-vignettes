@@ -4,13 +4,17 @@ const Vignette17 = () => {
     return( 
        <div className="bg-blue-300 w-screen p-12">
             <div className=" items-center justify-center bg-white rounded-box p-7">
-                <p className='text-primary-content'>Suponga que se le presenta la oportunidad de emprender en un negocio propio que cuenta 
-                    con estas caracteristicas: </p>
+                <p className='text-primary-content'>
+                    Para esta ocasión calculas los siguientes indicadores que te ayudarán a tomar una decisión 
+                </p>
                 <ul className='list-disc list-inside text-black'>
-                    <li>Por cada peso invertido recibes un peso de ganancia</li>
-                    <li>Solo tienes un competidor a la redonda</li>
-                    <li>El tiempo que debes invertir al día son 12 horas en total</li>
+                    <li>Competencia: en el mapa de puestos observas que hay un puesto ocupado a la redonda</li>
+                    <li>Esfuerzo: calculas que esta vez tendras que dedicarle 4 horas diarias a actividades del puesto</li>
+                    <li>Ingresos: para esta ocasión calculas que del 100% de tus ingresos 50% serán gastos y 50% ganancias</li>
                 </ul>
+                <p className='text-primary-content'>
+                    Después de leer los indicadores, ¿decides poner el puesto, o no? 
+                </p>
             </div>
             
             <div className='h-16 w-screen'>
@@ -31,8 +35,8 @@ const Vignette17 = () => {
                             <td className=" border border-slate-900 text-white">
                                 2
                             </td>
-                            <td className=" border border-slate-900 bg-red-500 text-black">
-                                Competencia
+                            <td className=" border border-slate-900 bg-gray-500 text-black">
+                                Vacio
                             </td>
                             <td className=" border border-slate-900 text-white">
                                 4
@@ -59,14 +63,14 @@ const Vignette17 = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td className='border border-slate-900 bg-red-500 text-black'>
-                                Competencia
+                            <td className=" border border-slate-900 bg-gray-500 text-black">
+                                Vacio
                             </td>
                             <td className='border border-slate-900  text-white'>
                                 12
                             </td>
                             <td className="border border-slate-900  bg-green-400 text-black">
-                                Su Negocio
+                                Tu Puesto
                             </td>
                             <td className="border border-slate-900 text-white">
                                 14
@@ -99,8 +103,8 @@ const Vignette17 = () => {
                             <td className='border border-slate-900 text-white'>
                                 22
                             </td>
-                            <td className="border border-slate-900 bg-red-500 text-black">
-                                Competencia
+                            <td className=" border border-slate-900 bg-gray-500 text-black">
+                                Vacio
                             </td>
                             <td className="border border-slate-900 text-white">
                                 24
@@ -117,8 +121,8 @@ const Vignette17 = () => {
                     <div className='text-center flex-wrap'>
                         <p className='font-bold text-lg text-black'>Destino del dinero ingresado</p>
                         <BarChart
-                            xAxis={[{ data: ['Ingresos', 'Gastos', 'Ganancias'] }]}
-                            series={[{ data: [2,1,1] } ]}
+                            xAxis={[{ data: [ 'Gastos', 'Ganancias'] }]}
+                            series={[{ data: [50,50] } ]}
                             height={200}
                         />
                     </div>
@@ -126,8 +130,8 @@ const Vignette17 = () => {
                 <div className='w-1/2'>
                     <div className='text-center'>
                         <p className='font-bold text-lg text-black'>Horas del día destinadas al negocio</p>
-                        <progress className="progress progress-success h-12 w-80" value={33} max={100}></progress>
-                        <p className='italic text-black'>8 horas || 16 horas</p>
+                        <progress className="progress progress-success h-12 w-80" value={17} max={100}></progress>
+                        <p className='italic text-black'>4 horas || 20 horas</p>
                     </div>
                 </div>
             </div>
