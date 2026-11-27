@@ -1,4 +1,4 @@
-import { BarChart } from '@mui/x-charts/BarChart';
+import { PieChart } from '@mui/x-charts/PieChart';
 
 const Vignette18 = () => {
     return( 
@@ -25,7 +25,7 @@ const Vignette18 = () => {
 
             <div className="flex flex-wrap items-center justify-center bg-white rounded-box p-7">
                 <div className='text-center flex-wrap w-3/4'>
-                    <p className='font-bold text-lg text-black'>Mapa de puestos a la redonda</p>
+                    <p className='font-bold text-lg text-black'>Mapa de negocios a la redonda</p>
                     <table className="table-fixed w-full">
                     <tbody>
                         <tr>
@@ -66,10 +66,10 @@ const Vignette18 = () => {
                             <td className='border border-slate-900 bg-red-500 text-black'>
                                 Competencia
                             </td>
-                            <td className='border border-slate-900  text-white'>
+                            <td className='border border-slate-900 text-white'>
                                 12
                             </td>
-                            <td className="border border-slate-900  bg-green-400 text-black">
+                            <td className="border border-slate-900 bg-green-400 text-black">
                                 Su Negocio
                             </td>
                             <td className="border border-slate-900 text-white">
@@ -114,7 +114,7 @@ const Vignette18 = () => {
                             </td>
                         </tr>
                     </tbody>
-                    </table>
+                </table>
                 </div>
                 <div className='h-16 w-screen'></div>
                 <div className='w-1/2'>
@@ -131,11 +131,17 @@ const Vignette18 = () => {
                     <div className='text-center'>
                         <p className='font-bold text-lg text-black'>Horas del día destinadas al negocio</p>
                         <progress className="progress progress-success h-12 w-80" value={33} max={100}></progress>
-                        <p className='italic text-black'>8 horas || 16 horas</p>
+                        <p className='italic text-black'>4 horas || 20 horas</p>
                     </div>
                 </div>
             </div>
             <div className='h-16 w-screen'></div>
+            <div className="flex flex-wrap items-center justify-center space-x-3 bg-white rounded-box p-7">
+                 <p className='font-bold text-black w-1/2'>¿Emprendería en este negocio?</p> 
+                 <p className='italic text-black'>No</p>
+                 <input type="checkbox" className="toggle checked:toggle-success checked:[--tglbg:green]" defaultChecked />
+                 <p className='italic text-black'>Si</p>
+            </div>
         </div>);
 };
 

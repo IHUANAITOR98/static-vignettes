@@ -1,4 +1,4 @@
-import { BarChart } from '@mui/x-charts/BarChart';
+import { PieChart } from '@mui/x-charts/PieChart';
 
 const Vignette11 = () => {
     return( 
@@ -25,7 +25,7 @@ const Vignette11 = () => {
 
             <div className="flex flex-wrap items-center justify-center bg-white rounded-box p-7">
                 <div className='text-center flex-wrap w-3/4'>
-                    <p className='font-bold text-lg text-black'>Mapa de puestos a la redonda</p>
+                    <p className='font-bold text-lg text-black'>Mapa de negocios a la redonda</p>
                     <table className="table-fixed w-full">
                     <tbody>
                         <tr>
@@ -35,8 +35,8 @@ const Vignette11 = () => {
                             <td className=" border border-slate-900 text-white">
                                 2
                             </td>
-                            <td className=" border border-slate-900 bg-gray-500 text-black">
-                                Vacio
+                            <td className=" border border-slate-900 text-white">
+                                3
                             </td>
                             <td className=" border border-slate-900 text-white">
                                 4
@@ -63,14 +63,14 @@ const Vignette11 = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td className=" border border-slate-900 bg-gray-500 text-black">
-                                Vacio
+                            <td className='border border-slate-900 bg-red-500 text-black'>
+                                Competencia
                             </td>
-                            <td className='border border-slate-900  text-white'>
+                            <td className='border border-slate-900 text-white'>
                                 12
                             </td>
-                            <td className="border border-slate-900  bg-green-400 text-black">
-                                Tu Puesto
+                            <td className="border border-slate-900 bg-green-400 text-black">
+                                Su Negocio
                             </td>
                             <td className="border border-slate-900 text-white">
                                 14
@@ -103,8 +103,8 @@ const Vignette11 = () => {
                             <td className='border border-slate-900 text-white'>
                                 22
                             </td>
-                            <td className=" border border-slate-900 bg-gray-500 text-black">
-                                Vacio
+                            <td className="border border-slate-900 text-white">
+                                23
                             </td>
                             <td className="border border-slate-900 text-white">
                                 24
@@ -114,7 +114,7 @@ const Vignette11 = () => {
                             </td>
                         </tr>
                     </tbody>
-                    </table>
+                </table>
                 </div>
                 <div className='h-16 w-screen'></div>
                 <div className='w-1/2'>
@@ -136,6 +136,12 @@ const Vignette11 = () => {
                 </div>
             </div>
             <div className='h-16 w-screen'></div>
+            <div className="flex flex-wrap items-center justify-center space-x-3 bg-white rounded-box p-7">
+                 <p className='font-bold text-black w-1/2'>¿Emprendería en este negocio?</p> 
+                 <p className='italic text-black'>No</p>
+                 <input type="checkbox" className="toggle checked:toggle-success checked:[--tglbg:green]" defaultChecked />
+                 <p className='italic text-black'>Si</p>
+            </div>
         </div>);
 };
 
